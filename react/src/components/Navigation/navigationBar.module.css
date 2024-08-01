@@ -1,0 +1,20 @@
+.Nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 18px 5px;
+    border-bottom: 1px solid black;
+}
+
+.Nav input{
+    flex: 0.8;
+    margin: 8px 12px;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    border-radius: 25px;
+}
+
+.cartBtn{
+    background: none;
+    border: 0;
+    font-size: 1.5rem;
+}
