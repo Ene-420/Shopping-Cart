@@ -11,7 +11,7 @@ const NavigationBar = ({ item }) => {
       <input type="text" placeholder="Search..." />
       <button className={styles.cartBtn}>
         <FontAwesomeIcon icon={faCartShopping} />
-        {`(${item})`}
+        {`(${item.length})`}
       </button>
     </div>
   );

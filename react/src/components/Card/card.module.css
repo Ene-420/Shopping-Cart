@@ -1,0 +1,22 @@
+.card{
+    background: none;
+    width: 250px;
+    height: 350px;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid rgb(94, 92, 92);
+
+}
+
+.cardImg{
+    width:100% ;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    /* border-radius: 8px 8px  0 0; */
+    border: 1px solid #efefef;
+}
