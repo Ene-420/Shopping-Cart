@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage/homePage";
 import ErrorPage from "./errorPage";
 import Clothes from "./components/Clothing/Clothes";
 import useProductList from "./functions/getProducts";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -16,6 +17,10 @@ function App() {
 
   function addToCart(item) {
     setCartItem([...cartItem, item])
+  }
+
+  function removeFromCart(index) {
+    setCartItem(cartItem.filter((_, i)=> index !== i ))
   }
   const content = () => {
     return { jewellry, electronics, menClothing, womenClothing };
@@ -34,7 +39,9 @@ function App() {
           <Route path="clothing" element={<Clothes cart={addToCart} />} />
           <Route path="jewelery" element />
           <Route />
+          <Route />
         </Route>
+        <Route path="bag" element={<Cart item={cartItem} /> } /> 
       </Routes>
     </>
   );
