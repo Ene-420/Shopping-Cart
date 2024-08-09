@@ -19,8 +19,10 @@ function App() {
     setCartItem([...cartItem, item])
   }
 
-  function removeFromCart(index) {
-    setCartItem(cartItem.filter((_, i)=> index !== i ))
+  function removeFromCart(itemName) {
+    const itemToRemove = cartItem.find((item) => item.title.includes(itemName));
+    setCartItem(cartItem.filter((_, i) => i !== cartItem.lastIndexOf(itemToRemove)));
+    //setCartItem(cartItem.filter((_, i) => index !== i));
   }
   const content = () => {
     return { jewellry, electronics, menClothing, womenClothing };
@@ -41,7 +43,7 @@ function App() {
           <Route />
           <Route />
         </Route>
-        <Route path="bag" element={<Cart item={cartItem} /> } /> 
+        <Route path="bag" element={<Cart item={cartItem} add={addToCart} remove={removeFromCart} /> } /> 
       </Routes>
     </>
   );

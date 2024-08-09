@@ -20,7 +20,9 @@ const useProductList = () => {
       womenClothingItem = [];
 
     try {
-      await fetch("https://fakestoreapi.com/products")
+      await fetch("https://fakestoreapi.com/products", {
+        mode: "no-cors",
+      })
         .then((res) => res.json())
         .then((json) => {
           json.map((item) => {
@@ -36,9 +38,9 @@ const useProductList = () => {
                 break;
               case "jewelery":
                 jeweleryItems.push(item);
-                    break;
-                default:
-                    break;
+                break;
+              default:
+                break;
             }
           });
         });
