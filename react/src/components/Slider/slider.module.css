@@ -13,7 +13,7 @@ button{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background-color: black;
+    background-color: #d4af37;;
 }
 
 .logosSlide>span {
@@ -21,7 +21,7 @@ button{
     padding: 10px;
     text-align: center;
     font-size: 1.2em;
-    color: #d4af37;
+    color: black;
     margin: 0 30px;
     font-weight: bold;
 }
@@ -92,9 +92,7 @@ button{
     font-size: 2em;
     outline: 1px solid black;
     background-color: white;
-    /* background-color: white;
-    border: 1px solid grey; */
-    
+ 
 }
 
 .left{

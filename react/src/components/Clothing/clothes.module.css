@@ -1,11 +1,12 @@
 .rows {
+    width: 90%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    /* align-items: center; */
     flex: 1;
     flex-wrap: wrap;
-    margin: 8px;
-    gap: 2px;
+    margin: 2px auto;
+    gap: 1.5px;
 }
 
 

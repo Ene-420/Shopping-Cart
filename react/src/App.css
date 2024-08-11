@@ -10,3 +10,10 @@
     color: white;
     font-size: 1.35rem;
 }
+
+@media screen and (max-width:768px) {
+    .footer{
+        padding: 20px;
+        font-size: 1rem;
+    }
+}

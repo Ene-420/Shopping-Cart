@@ -13,7 +13,7 @@ const Clothes = ({ cart,  item }) => {
   
 
   function addClothToCart(index) {
-    if (gender.includes("men")) {
+    if (!gender.includes("women")) {
       const item = menClothing.filter((_, i) => index === i);
       cart(item[0]);
     } else {

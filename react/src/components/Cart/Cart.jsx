@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CartItem from "./CartItem";
+import styles from "./cartItem.module.css"
 import { Link, useLocation } from "react-router-dom";
 
 const Cart = ({ item, add, remove }) => {
@@ -54,9 +55,9 @@ const Cart = ({ item, add, remove }) => {
   return (
     <>
       <Link to="/"> {"< Back"}</Link>
-      <h1>My Bag</h1>
+      <h1 className={styles.cartHead}>My Bag</h1>
       {itemsInCart ? (
-        <>
+        <div className={styles.cartRow}>
           {Object.entries(itemsInCart).map(([key, value], i) => (
             <CartItem
               key={i}
@@ -67,7 +68,7 @@ const Cart = ({ item, add, remove }) => {
               operation={operation}
             />
           ))}
-        </>
+        </div>
       ) : (
         <h1>Loading...</h1>
       )}

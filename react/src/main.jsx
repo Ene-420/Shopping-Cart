@@ -2,11 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Footer from "./Footer.jsx";
 //import routes from "./components/route.jsx";
 
@@ -17,6 +13,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <App />
       <Footer />
     </BrowserRouter>
-    {/* <RouterProvider router={router} /> */}
   </React.StrictMode>,
 );
