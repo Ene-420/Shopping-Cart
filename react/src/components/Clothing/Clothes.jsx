@@ -27,7 +27,7 @@ const Clothes = ({ cart,  item }) => {
 
       {gender === "men" ? (
         <>
-          <h3>{"Men's Clothing"}</h3>
+          <h3 className={styles.head}>{"Men's Clothing"}</h3>
           <div className={styles.rows}>
             {menClothing.map((item, index) => (
               <Card
@@ -41,7 +41,7 @@ const Clothes = ({ cart,  item }) => {
         </>
       ) : (
         <>
-          <h3>{"Women's Clothing"}</h3>
+          <h3 className={styles.head}>{"Women's Clothing"}</h3>
           <div className={styles.rows}>
             {womenClothing.map((item, index) => (
               <Card
