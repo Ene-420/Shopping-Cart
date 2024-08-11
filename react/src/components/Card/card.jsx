@@ -7,13 +7,15 @@ const Card = ({index, content, onClick, addToCartClick }) => {
     <button className={styles.card} onClick={()=>{}}>
       <img src={content.image} alt={content.title} className={styles.cardImg} />
       <h3>{content.title}</h3>
-      <div>
+      <div className={styles.cardRow}>
         <span>{`$${content.price}`}</span>
-        <button>
+        <button className={styles.likeBtn} onClick={(event) => {
+          event.target.classList.toggle(styles.heart)
+        }}>
           <FontAwesomeIcon icon={faHeart} />
         </button>
       </div>
-      <button onClick={() => {
+      <button className={styles.addToCartBtn} onClick={() => {
         addToCartClick(index)
       }}>Add to Cart+</button>
     </button>

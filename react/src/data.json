@@ -1,0 +1,20 @@
+{
+    "slides":[
+        {
+            "src":"../../assets/menClothingS.jpg",
+            "alt":"men clothing"
+        },
+        {
+            "src":"../../assets/womenClothingS.jpg",
+            "alt":"women clothing"
+        },
+        {
+            "src":"../../assets/jewelS.jpg",
+            "alt":"jewellery"
+        },
+        {
+            "src":"./assets/electronicsS.jpg",
+            "alt":"electronics"
+        }
+    ]
+}

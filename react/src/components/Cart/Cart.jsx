@@ -3,11 +3,10 @@ import CartItem from "./CartItem";
 import { Link, useLocation } from "react-router-dom";
 
 const Cart = ({ item, add, remove }) => {
-
   const [itemsInCart, setItemsInCart] = useState(null);
 
   useEffect(() => {
-    console.log({item});
+    console.log({ item });
     const cartItems = item.map((it) => {
       return it.title;
     });
@@ -15,19 +14,11 @@ const Cart = ({ item, add, remove }) => {
   }, [item]);
 
   function addToQuantity(item) {
-    // const updateItemsList = { ...itemsInCart };
-    // updateItemsList[item].count++;
-
-    add(findItem(item))
-    //setItemsInCart(updateItemsList);
+    add(findItem(item));
   }
 
   function removeFromQuantity(item) {
-    // const updateItemsList = { ...itemsInCart };
-    // updateItemsList[item].count > 0 && updateItemsList[item].count--
-    
-    remove(item);
-    //setItemsInCart(updateItemsList);
+    remove(item);  
   }
 
   function removeItemFromCart(item) {
@@ -35,11 +26,11 @@ const Cart = ({ item, add, remove }) => {
     delete updateItemsList[item];
 
     setItemsInCart(updateItemsList);
-    remove(item)
+    remove(item);
   }
 
   const operation = () => {
-    return { addToQuantity, removeFromQuantity, removeItemFromCart, };
+    return { addToQuantity, removeFromQuantity, removeItemFromCart };
   };
   function countOfItemsInArray(array) {
     console.log({ array });
@@ -56,7 +47,7 @@ const Cart = ({ item, add, remove }) => {
 
   function findItem(itemTitle) {
     const foundItem = item.filter((it) => it.title.includes(itemTitle));
-    //const itemFamily = Object.entries(itemsInCart).filter(([key, value]) => key.includes(itemTitle))[0]
+    
     console.log(foundItem[0]);
     return foundItem[0];
   }
